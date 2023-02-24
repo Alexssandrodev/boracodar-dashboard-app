@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>App - Dashboard</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="login-user">
+                <i class="ph-user"></i>
+                <h2>Anna Maria</h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="sidebar">
+                <div class="dash">
+                    <i class="ph-gauge"></i>
+                </div>
+                <nav class="icons">
+                    <a href="#"><i class="ph-activity"></i></a>
+                    <a href="#"><i class="ph-align-bottom"></i></a>
+                    <a href="#"><i class="ph-app-store-logo"></i></a>
+                    <a href="#"><i class="ph-wrench"></i></i></a>
+                    <a href="#"><i class="ph-sign-out"></i></a>
+                </nav>
+            </section>
+            <div class="box">
+        
+                <section class="content">
+                    <h1>Dashboard</h1>
+                    <div class="cards">
+                        <div class="card" data-anime="left">
+                            <h2>NPS Geral</h2>
+                            <i class="ph-smiley"></i>
+                            <p class="excelente">Excelente!</p>
+                            <p>NPS score: 80</p>
+                        </div>
+                        <div class="card" data-anime="right">
+                            <h2>Vendas fechadas</h2>
+                            <div class="graphic">
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                </svg>
+                            </div>
+                            <div class="percent">
+                                <h2>75%</h2>
+                            </div>
+                            <div class="statistc">
+                                <span id="stat"></span>
+                                <span>Esperado: 70</span>
+                                <span id="stat-2"></span>
+                                <span>alcaçado: 60</span>
+                            </div>
+                        </div>
+                        <div class="card" data-anime="right">
+                            <h2>Meta mensal</h2>
+                            <div class="graphic">
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle class="second-cicle" cx="70" cy="70" r="70"></circle>
+                                </svg>
+                            </div>
+                            <div class="percent">
+                                <h2>60%</h2>
+                            </div>
+                            <div class="statistc">
+                                <span id="stat"></span>
+                                <span>Esperado: 100</span>
+                                <span id="stat-2"></span>
+                                <span>alcaçado: 75</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="box"  data-anime="left">
+                    <section class="sales-day">
+                        <div class="title">
+                            <h2>Vendas por dia da semana</h2>
+                        </div>
+                        <div class="days">
+                            <div class="stat">
+                                <div class="icon">
+                                    <i class="ph-caret-up"></i>
+                                    <p>Dias com mais vendas</p>
+                                </div>
+                                <h3>Domingo</h3>
+                                
+                                <div class="icon">
+                                    <i id="orange" class="ph-caret-down"></i>
+                                    <p>Dias com menos vendas</p>
+                                </div>
+                                <h3>Segunda-feira</h3>
+                            </div>
+
+                            <div class="stats">
+                                <div class="progress"><p>Dom</p></div>
+                                <div class="progress"><p>Seg</p></div>
+                                <div class="progress"><p>Ter</p></div>
+                                <div class="progress"><p>Qua</p></div>
+                                <div class="progress"><p>Qui</p></div>
+                                <div class="progress"><p>Sex</p></div>
+                                <div class="progress"><p>Sab</p></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

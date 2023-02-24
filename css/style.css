@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    font-weight: 300;
+}
+
+:root {
+    --bg: #292738;
+    font-size: 62.5%;
+    font-family: "Roboto";
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: "Roboto";
+    all: unset;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg);
+}
+
+heder {
+    width: 100%;
+}
+
+header .container {
+    max-width: 128rem;
+    margin: auto;
+    padding: 2rem;
+}
+
+header .container .login-user {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+}
+
+header .container .login-user h2 {
+    color: #999;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+header .container .login-user i {
+    color: #6600ff;
+}
+
+main {
+    width: 100%;
+}
+
+main .container {
+    display: flex;
+    max-width: 192rem;
+    margin-top: 5rem;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+main .box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main section.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 7rem;
+    background-color: #999;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem #999;
+    transition: all 0.5s ease-in-out;
+}
+
+main section.sidebar .dash {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    border-bottom: 0.1rem solid var(--bg);
+}
+
+main section.sidebar .dash i {
+    font-size: 3.2rem;
+    color: #6600ff;
+}
+
+main section.sidebar nav.icons i {
+    color: var(--bg);
+}
+
+main section.sidebar nav.icons a {
+    display: flex;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease-in-out;
+    padding: 2rem;
+}
+
+main section.sidebar nav.icons a:hover {
+    background-color: #6600ff;
+    border-radius: 1rem;
+}
+
+main section.sidebar nav.icons i:hover {
+    color: #999;
+}
+
+main .container section.content {
+    margin-left: 5rem;
+    margin-right: 2rem;
+}
+
+main .container section.content h1 {
+    font-size: 3.2rem;
+    color: #999;
+    margin-bottom: 2rem;
+    border-bottom: 0.1rem solid #999;
+    padding-bottom: 1rem;
+}
+
+main .container section.content .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+main .container section.content .card {
+    background-color: #363447;
+    padding: 2rem 4rem;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+}
+
+main .container section.content .card h2 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+main .container section.content .card i {
+    color: #69ffaa;
+    font-size: 3.2rem;
+}
+
+main .container section.content .card .excelente {
+    color: #69ffaa;
+    margin-bottom: 15rem;
+}
+
+main .container section.content .card span {
+    color: #fff;
+    margin-left: 3rem;
+}
+
+main .container section.content .card p {
+    color: #fff;
+}
+
+.card .statistc {
+    position: relative;
+}
+
+.card .statistc #stat {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0.2rem;
+    left: 19rem;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #6600ff;
+}
+
+.card .statistc #stat-2 {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0.2rem;
+    left: 6rem;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--bg);
+}
+
+main .container section.content .card:nth-child(1) {
+    margin: 0;
+}
+
+main .container section.content .card .graphic svg {
+    width: 20rem;
+    height: 20rem;
+    align-items: center;
+}
+
+main .container section.content .card .percent {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container section.content .card .percent h2 {
+    font-weight: 700;
+    color: #fff;
+}
+
+circle {
+    width: 20rem;
+    height: 20rem;
+    fill: none;
+    stroke: #6600ff;
+    stroke-width: 20;
+    transform: translate(2.5rem, 3rem);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.second-cicle {
+    stroke-dasharray: 350;
+}
+
+circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: var(--bg);
+}
+
+circle:nth-child(2) {
+    stroke-dashoffset: 50;
+    stroke: #6600ff;
+}
+
+main section.sales-day {
+    margin: 5rem 0 5rem 5rem;
+    background-color: #363447;
+    padding: 2rem 5rem;
+    border-radius: 1rem;
+    margin-right: 2rem;
+}
+
+main section.sales-day .days {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main section.sales-day .days .stat .icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+main section.sales-day .days .stat .icon i {
+    color: #69ffaa;
+}
+
+main section.sales-day .days .stat .icon #orange {
+    color: #e28605;
+}
+
+main section.sales-day .days .stat .icon p {
+    color: #fff;
+}
+
+main section.sales-day .days .stat h3 {
+    font-size: 2rem;
+    color: #999;
+    margin-bottom: 2rem;
+}
+
+main section.sales-day h2 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+main section.sales-day .box {
+    width: 100%;
+}
+
+main section.sales-day .days .stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+main section.sales-day .days .stats .progress {
+    width: 1rem;
+    background-color: #69ffaa;
+    border-radius: 1rem;
+    position: relative;
+}
+
+main section.sales-day .days .stats .progress:nth-child(2) {
+    height: 5rem;
+    background-color: #e28605;
+}
+
+main section.sales-day .days .stats .progress:nth-child(5) {
+    height: 7rem;
+    background-color: #e28605;
+}
+
+main section.sales-day .days .stats .progress:nth-child(3) {
+    height: 14rem;
+}
+
+main section.sales-day .days .stats .progress:nth-child(7) {
+    height: 12rem;
+}
+
+main section.sales-day .days .stats .progress p {
+    color: #fff;
+    position: absolute;
+    top: -2rem;
+    right: -1rem;
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+[data-anime] {
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    main .container section.content .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main section.sales-day .days {
+        justify-content: center;
+    }
+
+    main section.sales-day h2 {
+        text-align: center;
+    }
+
+    main section.sales-day .days .stat {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main .container section.content .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
