@@ -29,19 +29,27 @@ body {
     background-color: var(--bg);
 }
 
-heder {
-    width: 100%;
+.container {
+    max-width: 192rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 7vw 3fr;
+    grid-template-rows: 5vh 1fr 1fr;
+    grid-template-areas: "header header"
+                        "aside main";
+}
+
+header {
+    grid-area: header;
 }
 
 header .container {
     max-width: 128rem;
     margin: auto;
-    padding: 2rem;
 }
 
 header .container .login-user {
     display: flex;
-    justify-content: flex-end;
     gap: 1rem;
     align-items: center;
 }
@@ -56,16 +64,14 @@ header .container .login-user i {
     color: #6600ff;
 }
 
-main {
-    width: 100%;
+aside {
+    grid-area: aside;
+    margin-top: 2rem;
 }
 
-main .container {
-    display: flex;
-    max-width: 192rem;
-    margin-top: 5rem;
-    justify-content: center;
-    transition: all 0.5s ease-in-out;
+main {
+    grid-area: main;
+    margin-top: 2rem;
 }
 
 main .box {
@@ -74,56 +80,55 @@ main .box {
     flex-direction: column;
 }
 
-main section.sidebar {
+aside .box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    width: 7rem;
     background-color: #999;
     border-radius: 1rem;
     box-shadow: 0.1rem 0.1rem 0.5rem #999;
     transition: all 0.5s ease-in-out;
 }
 
-main section.sidebar .dash {
+aside .box .dash {
     width: 100%;
     text-align: center;
     margin-top: 2rem;
     border-bottom: 0.1rem solid var(--bg);
 }
 
-main section.sidebar .dash i {
+aside .box .dash i {
     font-size: 3.2rem;
     color: #6600ff;
 }
 
-main section.sidebar nav.icons i {
+aside .box nav.icons i {
     color: var(--bg);
 }
 
-main section.sidebar nav.icons a {
+aside .box nav.icons a {
     display: flex;
     margin-bottom: 1rem;
     transition: all 0.5s ease-in-out;
     padding: 2rem;
 }
 
-main section.sidebar nav.icons a:hover {
+aside .box nav.icons a:hover {
     background-color: #6600ff;
     border-radius: 1rem;
 }
 
-main section.sidebar nav.icons i:hover {
+aside .box nav.icons i:hover {
     color: #999;
 }
 
-main .container section.content {
+main section.content {
     margin-left: 5rem;
     margin-right: 2rem;
 }
 
-main .container section.content h1 {
+main section.content h1 {
     font-size: 3.2rem;
     color: #999;
     margin-bottom: 2rem;
@@ -131,13 +136,13 @@ main .container section.content h1 {
     padding-bottom: 1rem;
 }
 
-main .container section.content .cards {
+main section.content .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-main .container section.content .card {
+main section.content .card {
     background-color: #363447;
     padding: 2rem 4rem;
     text-align: center;
@@ -145,28 +150,28 @@ main .container section.content .card {
     position: relative;
 }
 
-main .container section.content .card h2 {
+main section.content .card h2 {
     font-size: 2.4rem;
     color: #fff;
     margin-bottom: 2rem;
 }
 
-main .container section.content .card i {
+main section.content .card i {
     color: #69ffaa;
     font-size: 3.2rem;
 }
 
-main .container section.content .card .excelente {
+main section.content .card .excelente {
     color: #69ffaa;
     margin-bottom: 15rem;
 }
 
-main .container section.content .card span {
+main section.content .card span {
     color: #fff;
     margin-left: 3rem;
 }
 
-main .container section.content .card p {
+main section.content .card p {
     color: #fff;
 }
 
@@ -194,17 +199,17 @@ main .container section.content .card p {
     background-color: var(--bg);
 }
 
-main .container section.content .card:nth-child(1) {
+main section.content .card:nth-child(1) {
     margin: 0;
 }
 
-main .container section.content .card .graphic svg {
+main section.content .card .graphic svg {
     width: 20rem;
     height: 20rem;
     align-items: center;
 }
 
-main .container section.content .card .percent {
+main section.content .card .percent {
     position: absolute;
     top: 3rem;
     left: 0;
@@ -215,7 +220,7 @@ main .container section.content .card .percent {
     align-items: center;
 }
 
-main .container section.content .card .percent h2 {
+main section.content .card .percent h2 {
     font-weight: 700;
     color: #fff;
 }
@@ -357,7 +362,8 @@ main section.sales-day .days .stats .progress p {
 }
 
 @media screen and (max-width: 870px) {
-    main .container section.content .cards {
+
+    main section.content .cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -375,7 +381,7 @@ main section.sales-day .days .stats .progress p {
 }
 
 @media screen and (max-width: 768px) {
-    main .container section.content .cards {
+    main section.content .cards {
         grid-template-columns: 1fr;
     }
 }
