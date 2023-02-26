@@ -130,6 +130,7 @@ main section.content {
 
 main section.content h1 {
     font-size: 3.2rem;
+    font-weight: 700;
     color: #999;
     margin-bottom: 2rem;
     border-bottom: 0.1rem solid #999;
@@ -152,6 +153,7 @@ main section.content .card {
 
 main section.content .card h2 {
     font-size: 2.4rem;
+    font-weight: 700;
     color: #fff;
     margin-bottom: 2rem;
 }
@@ -291,6 +293,7 @@ main section.sales-day .days .stat h3 {
 
 main section.sales-day h2 {
     font-size: 2.4rem;
+    font-weight: 700;
     color: #fff;
     margin-bottom: 2rem;
 }
